@@ -2,6 +2,11 @@
 #include "Evento.h"
 
 
+Evento::Evento() {
+    this->duracion = 0;
+    this->nombre = "";
+}
+
 Evento::Evento(int duracion, string nombre){
     this->duracion = duracion;
     this->nombre = nombre;

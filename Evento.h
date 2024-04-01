@@ -9,6 +9,7 @@ class Evento{
         int duracion;
         string nombre;
     public:
+        Evento();
         Evento(int duracion, string nombre);
         int getDuracion();
         string getNombre();
