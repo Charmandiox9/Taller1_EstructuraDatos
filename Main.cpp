@@ -3,15 +3,17 @@
 #include "Asistente.h"
 
 using namespace std;
-const int eventosMaximos = 10;
 
-/*bool crearEvento(int duracion, string nombre, string tipo, Evento eventos[], int& cantidadEventos){
+const int eventosMaximos = 3;
+//typedef Evento *Eptr;
+
+/*bool crearEvento(int duracion, string nombre, string tipo, Eptr eventos[], int cantidadEventos){
     if (cantidadEventos >= eventosMaximos) {
         cout<< "Error: No se pueden agregar más eventos." <<endl;
         return false;
     }
 
-    eventos[cantidadEventos] = Evento(duracion, nombre);
+    eventos[cantidadEventos] = new Evento(duracion, nombre);
     cantidadEventos++;
     return true;
 
@@ -20,7 +22,7 @@ const int eventosMaximos = 10;
 
 int main(){
 
-    //Evento eventos[eventosMaximos];
+    //Eptr *eventos = new Eptr[eventosMaximos];
     int cantidadEventos = 0;
 
     int opcion = 0;
@@ -48,13 +50,21 @@ int main(){
             /*if(crearEvento(duracion, nombre, tipo, eventos, cantidadEventos)){
                 cout<<"Evento creado correctamente!"<<endl;
             }*/
+
+            cout<<"Bienvenido al sistema ...\n"<<endl;
+            cout<<"1. Crear evento."<<endl;
+            cout<<"2. Crear asistente."<<endl;
+            cout<<"3. Hacer informe."<<endl;
+            cout<<"4. Salir."<<endl;
+            cin>>opcion;
         }
 
     }while(opcion != 4);
 
 
+
     /*for(int i = 0; i < cantidadEventos; i++) {
-        cout<<"Nombre: " << eventos[i].getNombre() << "\nduracion: " << eventos[i].getDuracion()<<endl;
+        cout<<"Nombre: " << eventos[i]->getNombre() << "\nduracion: " << eventos[i]->getDuracion()<<endl;
     }*/
 
     return 0;

@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Evento.h"
 
+using namespace std;
+
 
 Evento::Evento() {
     this->duracion = 0;
