@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Evento.cpp"
 #include "Asistente.h"
 
@@ -17,6 +18,19 @@ bool crearEvento(int duracion, string nombre, string tema, int asistentesMax, Ev
 
 
 };
+
+bool iniciarSesion(string rut, string contra){
+    ifstream archivo("usuarios.txt");
+
+    if (archivo.is_open()) {
+    // Aquí irá el código para leer el archivo
+
+
+    
+    } else {
+        cout<< "Error al abrir el archivo." << std::endl;
+}
+}
 
 int main(){
 
