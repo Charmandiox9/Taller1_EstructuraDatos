@@ -82,15 +82,21 @@ int main(){
             cin>>opcion;
         } else if(opcion == 2){
 
+        } else if(opcion == 3){
+            cout<<"LISTA DE EVENTOS"<<endl;
+            for(int i = 0; i < cantidadEventos; i++){
+                cout<<"Nombre: " << eventos[i]->getNombre() << "\n duracion: " << eventos[i]->getDuracion()<<endl;
+            }
+
+            cout<<"Bienvenido al sistema ...\n"<<endl;
+            cout<<"1. Crear evento."<<endl;
+            cout<<"2. Crear asistente."<<endl;
+            cout<<"3. Hacer informe."<<endl;
+            cout<<"4. Salir."<<endl;
+            cin>>opcion;
         }
 
     }while(opcion != 4);
-
-
-
-    for(int i = 0; i < cantidadEventos; i++) {
-        cout<<"Nombre: " << eventos[i]->getNombre() << "\n duracion: " << eventos[i]->getDuracion()<<endl;
-    }
 
     return 0;
 
